@@ -1,0 +1,76 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    font-family:  sans-serif;
+    font-weight: 400;
+}
+
+.main-container{
+    /* using main-container class , becaue bootstrap got container class which epplies some props  */
+    background-image: url(./images/bg-desktop.svg);
+    background-origin: content-box;
+    width: 100%;
+    /* to give full height of the view port to the container */
+    min-height: 100vh;
+    background-repeat: no-repeat no-repeat;
+   /* background-size: cover; */
+   background-size: contain; 
+   /* display: inline-block; */
+   overflow: hidden;
+   padding-left: 120px;
+   background-color: hsl(258, 41%, 54%);
+
+}
+#shift-bottom{
+    padding-top:120px; 
+    margin-right: 50px;
+}
+.white-div{
+    color: white;
+    padding: 50px;
+}
+h1{
+    font-family: 'Poppins', sans-serif;
+    font-weight: 600;
+}
+.btn-lg{
+    padding: 10px 50px;
+    border-radius: 50px;
+    color: hsl(257, 40%, 49%);
+}
+.name-me{
+    margin: auto;
+    width: 50%;
+    margin-top: 20px;
+    /* Giving height to footer to remove white space at the bottom */
+    height: 40px; 
+}
+.icons{
+    margin-bottom: 30px;
+}
+i{
+    /* font-size: 30px; */
+    color: white;
+    border: 1px solid white;
+    border-radius: 50%;
+    padding: 10px;
+    text-align: center;
+    margin-right: 20px;
+}
+
+/* Now work on Mobile view */
+
+@media (min-width:375px) and (max-width:700px){
+    .icons{
+        display: flex;   
+        align-items: center;     
+    }
+    h1{
+        /* improving the text in mobile version */
+        display: inline-block;
+    }
+    
+} 
