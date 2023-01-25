@@ -7,7 +7,9 @@ body{
     font-family:  sans-serif;
     font-weight: 400;
 }
-
+.logo{
+    padding: 55px 20px 0 35px;
+}
 .main-container{
     /* using main-container class , becaue bootstrap got container class which epplies some props  */
     background-image: url(./images/bg-desktop.svg);
@@ -25,16 +27,27 @@ body{
 
 }
 #shift-bottom{
-    padding-top:120px; 
-    margin-right: 50px;
+    width: 90%;
+    padding:20px;
+    margin-top: 3em;
+    /* padding-top:120px; 
+    margin-right: 50px; */
 }
 .white-div{
     color: white;
     padding: 50px;
+    
 }
-h1{
+
+.white-div h2{
     font-family: 'Poppins', sans-serif;
     font-weight: 600;
+    font-size: 32px;
+    padding-right: 0;
+}
+.white-div p{
+    /* text-align: center; */
+    line-height: 1.5;
 }
 .btn-lg{
     padding: 10px 50px;
@@ -49,6 +62,9 @@ h1{
     height: 40px; 
 }
 .icons{
+    display: flex;
+    justify-content: flex-end;
+    flex-direction: row;
     margin-bottom: 30px;
 }
 i{
@@ -60,17 +76,35 @@ i{
     text-align: center;
     margin-right: 20px;
 }
-
+i:hover{
+    cursor:pointer;
+}
 /* Now work on Mobile view */
 
 @media (min-width:375px) and (max-width:700px){
     .icons{
-        display: flex;   
-        align-items: center;     
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+    }
+    .white-div{
+        /* overflow: hidden; */
+        /* for keeping all the text beautifl in mobile view */
+        padding: 20px 10px;
+        
     }
     h1{
         /* improving the text in mobile version */
-        display: inline-block;
+        /* display: inline-block; */
+        text-align: center;
     }
-    
+    .logo{
+        position: absolute;
+        left: 20px;
+        bottom: 85vh;
+    }
+    #shift-bottom{
+
+        margin-top: 80px;
+    }
 } 
